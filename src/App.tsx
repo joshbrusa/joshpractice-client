@@ -1,3 +1,18 @@
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Color from "./pages/Color";
+
 export default function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="flex flex-col items-center">
+      <div className="max-w-4xl w-full">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/color" element={<Color />} />
+        </Routes>
+      </div>
+    </div>
+  );
 }
