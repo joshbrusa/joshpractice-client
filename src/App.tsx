@@ -4,7 +4,7 @@ import Home from "./pages/Home";
 import Color from "./pages/Color";
 import Addition from "./pages/Addition";
 import Subtraction from "./pages/Subtraction";
-import Multiplication from "./pages/multiplication";
+import Multiplication from "./pages/Multiplication";
 import Division from "./pages/Division";
 
 export default function App() {
