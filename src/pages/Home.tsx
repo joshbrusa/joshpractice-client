@@ -7,7 +7,7 @@ export default function Home() {
         <Link to="/">Josh Practice</Link>
       </div>
       <div className="p-2 text-xl">
-        <Link to="/color">Color Guesser</Link>
+        <Link to="/color">Color Quiz</Link>
       </div>
       <div className="p-2 text-xl">
         <Link to="/addition">Addition Quiz</Link>
@@ -20,6 +20,11 @@ export default function Home() {
       </div>
       <div className="p-2 text-xl">
         <Link to="/division">Division Quiz</Link>
+      </div>
+      <div className="p-2 text-xl">
+        <Link target="_blank" to="https://github.com/joshbrusa/joshpractice">
+          GitHub
+        </Link>
       </div>
     </div>
   );

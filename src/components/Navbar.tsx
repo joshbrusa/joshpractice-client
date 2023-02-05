@@ -32,7 +32,7 @@ export default function Navbar() {
 
       <div className="flex justify-end">
         <div
-          className={`absolute flex flex-col justify-end bg-bg rounded-lg ${
+          className={`absolute flex flex-col text-center justify-end bg-bg rounded-lg ${
             menuOpen ? null : "hidden"
           }`}
         >
@@ -50,6 +50,14 @@ export default function Navbar() {
           </div>
           <div className="p-2 text-xl">
             <Link to="/division">Division Quiz</Link>
+          </div>
+          <div className="p-2 text-xl">
+            <Link
+              target="_blank"
+              to="https://github.com/joshbrusa/joshpractice"
+            >
+              GitHub
+            </Link>
           </div>
         </div>
       </div>
