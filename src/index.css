@@ -14,3 +14,15 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+@layer components {
+  .home-button {
+    @apply p-2 m-2 w-60 text-xl bg-cyan-600 rounded-md bg-opacity-50;
+  }
+  .button {
+    @apply p-2 m-2 w-40 bg-cyan-600 rounded-md bg-opacity-50;
+  }
+  .prompt {
+    @apply w-60 p-8 rounded-md bg-neutral-100;
+  }
+}

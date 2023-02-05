@@ -59,18 +59,18 @@ export default function Color() {
     <div className="flex flex-col items-center text-center">
       <h1 className="p-2 text-xl">Color Quiz</h1>
       <h2 className="p-2">{`${correctScore}/${totalScore}`}</h2>
-      <div style={style} className="m-2 w-80 h-80"></div>
+      <div style={style} className="m-2 w-80 h-80 rounded-md"></div>
       <button
         onClick={() => handleSubmit(0)}
-        className="p-2"
+        className="button"
       >{`${rgb[0][0]}, ${rgb[0][1]}, ${rgb[0][2]}`}</button>
       <button
         onClick={() => handleSubmit(1)}
-        className="p-2"
+        className="button"
       >{`${rgb[1][0]}, ${rgb[1][1]}, ${rgb[1][2]}`}</button>
       <button
         onClick={() => handleSubmit(2)}
-        className="p-2"
+        className="button"
       >{`${rgb[2][0]}, ${rgb[2][1]}, ${rgb[2][2]}`}</button>
     </div>
   );

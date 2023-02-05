@@ -53,20 +53,20 @@ export default function Multiplication() {
     <div className="flex flex-col items-center text-center">
       <h1 className="p-2 text-xl">Multiplication Quiz</h1>
       <h2 className="p-2">{`${correctScore}/${totalScore}`}</h2>
-      <p className="p-2 text-lg">{`${
+      <p className="prompt">{`${
         numbers[correctIndex][0] * numbers[correctIndex][1]
       }`}</p>
       <button
         onClick={() => handleSubmit(0)}
-        className="p-2"
+        className="button"
       >{`${numbers[0][0]} x ${numbers[0][1]}`}</button>
       <button
         onClick={() => handleSubmit(1)}
-        className="p-2"
+        className="button"
       >{`${numbers[1][0]} x ${numbers[1][1]}`}</button>
       <button
         onClick={() => handleSubmit(2)}
-        className="p-2"
+        className="button"
       >{`${numbers[2][0]} x ${numbers[2][1]}`}</button>
     </div>
   );
