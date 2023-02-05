@@ -3,9 +3,9 @@ kind: Deployment
 metadata:
   annotations:
     autopilot.gke.io/resource-adjustment: >-
-      {"input":{"containers":[{"name":"joshpractice-client-1"}]},"output":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"joshpractice-client-1"}]},"modified":true}
+      {"input":{"containers":[{"name":"joshpractice-1"}]},"output":{"containers":[{"limits":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"requests":{"cpu":"500m","ephemeral-storage":"1Gi","memory":"2Gi"},"name":"joshpractice-1"}]},"modified":true}
   labels:
-    app: joshpractice-client
+    app: joshpractice
   managedFields:
     - apiVersion: apps/v1
       fieldsType: FieldsV1
@@ -32,7 +32,7 @@ metadata:
                 "f:app": {}
             "f:spec":
               "f:containers":
-                'k:{"name":"joshpractice-client-1"}':
+                'k:{"name":"joshpractice-1"}':
                   .: {}
                   "f:image": {}
                   "f:imagePullPolicy": {}
@@ -47,7 +47,7 @@ metadata:
               "f:terminationGracePeriodSeconds": {}
       manager: GoogleCloudConsole
       operation: Update
-      time: "2023-01-29T23:08:15Z"
+      time: "2023-02-05T00:41:52Z"
     - apiVersion: apps/v1
       fieldsType: FieldsV1
       fieldsV1:
@@ -81,14 +81,14 @@ metadata:
       manager: kube-controller-manager
       operation: Update
       subresource: status
-      time: "2023-01-29T23:10:25Z"
-  name: joshpractice-client
+      time: "2023-02-05T00:44:02Z"
+  name: joshpractice
   namespace: default
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: joshpractice-client
+      app: joshpractice
   strategy:
     rollingUpdate:
       maxSurge: 25%
@@ -97,12 +97,12 @@ spec:
   template:
     metadata:
       labels:
-        app: joshpractice-client
+        app: joshpractice
     spec:
       containers:
-        - image: gcr.io/joshpractice-376222/github.com/joshbrusa/joshpractice-client
+        - image: gcr.io/joshpractice-376222/github.com/joshbrusa/joshpractice
           imagePullPolicy: IfNotPresent
-          name: joshpractice-client-1
+          name: joshpractice-1
           resources:
             limits:
               cpu: 500m
@@ -129,7 +129,7 @@ apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
 metadata:
   labels:
-    app: joshpractice-client
+    app: joshpractice
   managedFields:
     - apiVersion: autoscaling/v2
       fieldsType: FieldsV1
@@ -148,7 +148,7 @@ metadata:
             "f:name": {}
       manager: GoogleCloudConsole
       operation: Update
-      time: "2023-01-29T23:08:16Z"
+      time: "2023-02-05T00:41:52Z"
     - apiVersion: autoscaling/v2
       fieldsType: FieldsV1
       fieldsV1:
@@ -182,8 +182,8 @@ metadata:
       manager: vpa-recommender
       operation: Update
       subresource: status
-      time: "2023-01-29T23:08:33Z"
-  name: joshpractice-client-hpa-oekf
+      time: "2023-02-05T00:42:09Z"
+  name: joshpractice-hpa-lnms
   namespace: default
 spec:
   maxReplicas: 5
@@ -198,7 +198,7 @@ spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: joshpractice-client
+    name: joshpractice
 ---
 apiVersion: v1
 kind: Service
@@ -208,7 +208,7 @@ metadata:
   finalizers:
     - service.kubernetes.io/load-balancer-cleanup
   labels:
-    app: joshpractice-client
+    app: joshpractice
   managedFields:
     - apiVersion: v1
       fieldsType: FieldsV1
@@ -233,7 +233,7 @@ metadata:
           "f:type": {}
       manager: GoogleCloudConsole
       operation: Update
-      time: "2023-01-29T23:09:16Z"
+      time: "2023-02-05T00:42:52Z"
     - apiVersion: v1
       fieldsType: FieldsV1
       fieldsV1:
@@ -247,25 +247,25 @@ metadata:
       manager: kube-controller-manager
       operation: Update
       subresource: status
-      time: "2023-01-29T23:10:01Z"
-  name: joshpractice-client-service
+      time: "2023-02-05T00:43:35Z"
+  name: joshpractice-service
   namespace: default
 spec:
   allocateLoadBalancerNodePorts: true
-  clusterIP: 10.49.131.28
+  clusterIP: 10.49.129.117
   clusterIPs:
-    - 10.49.131.28
+    - 10.49.129.117
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ipFamilies:
     - IPv4
   ipFamilyPolicy: SingleStack
   ports:
-    - nodePort: 32684
+    - nodePort: 30269
       port: 80
       protocol: TCP
       targetPort: 80
   selector:
-    app: joshpractice-client
+    app: joshpractice
   sessionAffinity: None
   type: LoadBalancer
