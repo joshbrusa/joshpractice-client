@@ -1,13 +1,17 @@
-# joshpractice
+# Josh Practice
 
 ## Summary
 
-Client to a fullstack application.
+A quiz application to practice your wit!
 
-## Technology
+## Technologies
 
-- Vite
+- React
 - Typescript
+- JSX
+- Tailwind CSS
+- Vite
 - Docker
 - Kubernetes
 - Google Cloud
+- Nginx
