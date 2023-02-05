@@ -37,7 +37,7 @@ export default function Navbar() {
           }`}
         >
           <div className="p-2 text-xl">
-            <Link to="/color">Color Guesser</Link>
+            <Link to="/color">Color Quiz</Link>
           </div>
           <div className="p-2 text-xl">
             <Link to="/addition">Addition Quiz</Link>
