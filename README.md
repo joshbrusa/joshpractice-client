@@ -1,4 +1,4 @@
-# joshpractice-client
+# joshpractice
 
 ## Summary
 
