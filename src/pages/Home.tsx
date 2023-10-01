@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <div className="flex flex-col items-center text-center">
       <Link className="p-2 text-2xl text-cyan-600" to="/">
-        Josh Practice
+        Practice
       </Link>
       <Link className="home-button" to="/color">
         Color Quiz
@@ -24,7 +24,7 @@ export default function Home() {
       <Link
         className="home-button"
         target="_blank"
-        to="https://github.com/joshbrusa/joshpractice"
+        to="https://github.com/joshbrusa/practice"
       >
         GitHub
       </Link>

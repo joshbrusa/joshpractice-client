@@ -23,7 +23,7 @@ export default function Navbar() {
     <nav ref={menuRef}>
       <div className="p-2 flex items-center justify-between">
         <div className="text-2xl text-cyan-600">
-          <Link to="/">Josh Practice</Link>
+          <Link to="/">Practice</Link>
         </div>
         <button onClick={() => setMenuOpen(!menuOpen)} className="w-10 h-10">
           <Bars3Icon />
@@ -52,10 +52,7 @@ export default function Navbar() {
             <Link to="/division">Division Quiz</Link>
           </div>
           <div className="p-2 text-xl">
-            <Link
-              target="_blank"
-              to="https://github.com/joshbrusa/joshpractice"
-            >
+            <Link target="_blank" to="https://github.com/joshbrusa/practice">
               GitHub
             </Link>
           </div>
